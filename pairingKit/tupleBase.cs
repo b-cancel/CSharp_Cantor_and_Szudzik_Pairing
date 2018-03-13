@@ -24,7 +24,8 @@ namespace pairingKit
     ///     -you do not want to use BigInteger
     /// </summary>
 
-    public class tupleBase {
+    public class tupleBase
+    {
 
         #region pairingFunctions
 
@@ -331,48 +332,48 @@ namespace pairingKit
 
         public static sbyte byteToSbyte(byte b) //unsigned -> signed
         {
-            return (sbyte)(b - (127 + 1)); //sbyte.MaxValue + 1
+            return (sbyte)(b - (127)); //sbyte.MaxValue
         }
 
         public static byte sbyteToByte(sbyte sB) //signed -> unsigned
         {
-            return (byte)(sB + (127 + 1)); //sbyte.MaxValue + 1
+            return (byte)(sB + (127)); //sbyte.MaxValue
         }
 
         //-------------------------For 16 Bit Integers
 
         public static short ushortToShort(ushort uS) //unsigned -> signed
         {
-            return (short)(uS - (32767 + 1)); //short.MaxValue + 1
+            return (short)(uS - (32767)); //short.MaxValue
         }
 
         public static ushort shortToUshort(short s) //signed -> unsigned
         {
-            return (ushort)(s + (32767 + 1)); //short.MaxValue + 1
+            return (ushort)(s + (32767)); //short.MaxValue
         }
 
         //-------------------------For 32 Bit Integers
 
         public static int uintToInt(uint uI) //unsigned -> signed
         {
-            return (int)(uI - (2147483647 + 1)); //int.MaxValue + 1
+            return (int)(uI - (2147483647)); //int.MaxValue
         }
 
-        public static uint intToUint(int i) //signed -> unsigned + 1
+        public static uint intToUint(int i) //signed -> unsigned
         {
-            return (uint)(i + (2147483647 + 1)); //int.MaxValue
+            return (uint)(i + (2147483647)); //int.MaxValue
         }
 
         //-------------------------For 64 Bit Integers
 
         public static long ulongToLong(ulong uL) //unsigned -> signed
         {
-            return (long)(uL - (9223372036854775807 + 1)); //long.MaxValue + 1
+            return (long)(uL - (9223372036854775807)); //long.MaxValue
         }
 
         public static ulong longToUlong(long l) //signed -> unsigned
         {
-            return (ulong)(l + (9223372036854775807 + 1)); //long.MaxValue + 1
+            return (ulong)(l + (9223372036854775807)); //long.MaxValue
         }
 
         #endregion
