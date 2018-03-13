@@ -332,48 +332,48 @@ namespace pairingKit
 
         public static sbyte byteToSbyte(byte b) //unsigned -> signed
         {
-            return (sbyte)(b - (127)); //sbyte.MaxValue
+            return (sbyte)(((sbyte)(b - (127))) - (sbyte)1); //sbyte.MaxValue
         }
 
         public static byte sbyteToByte(sbyte sB) //signed -> unsigned
         {
-            return (byte)(sB + (127)); //sbyte.MaxValue
+            return (byte)(((byte)(sB + (127))) + (byte)1); //sbyte.MaxValue
         }
 
         //-------------------------For 16 Bit Integers
 
         public static short ushortToShort(ushort uS) //unsigned -> signed
         {
-            return (short)(uS - (32767)); //short.MaxValue
+            return (short)(((short)(uS - (32767))) - (short)1); //short.MaxValue
         }
 
         public static ushort shortToUshort(short s) //signed -> unsigned
         {
-            return (ushort)(s + (32767)); //short.MaxValue
+            return (ushort)(((ushort)(s + (32767))) + (ushort)1); //short.MaxValue
         }
 
         //-------------------------For 32 Bit Integers
 
         public static int uintToInt(uint uI) //unsigned -> signed
         {
-            return (int)(uI - (2147483647)); //int.MaxValue
+            return (int)(((int)(uI - (2147483647))) - (int)1); //int.MaxValue
         }
 
         public static uint intToUint(int i) //signed -> unsigned
         {
-            return (uint)(i + (2147483647)); //int.MaxValue
+            return (uint)(((uint)(i + (2147483647))) + (uint)1); //int.MaxValue
         }
 
         //-------------------------For 64 Bit Integers
 
         public static long ulongToLong(ulong uL) //unsigned -> signed
         {
-            return (long)(uL - (9223372036854775807)); //long.MaxValue
+            return (long)(((long)(uL - (9223372036854775807))) - (long)1); //long.MaxValue
         }
 
         public static ulong longToUlong(long l) //signed -> unsigned
         {
-            return (ulong)(l + (9223372036854775807)); //long.MaxValue
+            return (ulong)(((ulong)(l + (9223372036854775807))) + (ulong)1); //long.MaxValue
         }
 
         #endregion
