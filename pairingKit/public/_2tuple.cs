@@ -190,17 +190,20 @@
 
         #region Z -> (X,Y)
 
-        public static byte[] reverse(ushort z) {
-            return _2tuple.reverse(z);
-        } 
+        public static byte[] reverse(ushort z)
+        {
+            return tupleBase.byteSzudzik2tupleReverse(z);
+        }
 
-        public static ushort[] reverse(uint z) {
-            return _2tuple.reverse(z);
-        } 
+        public static ushort[] reverse(uint z)
+        {
+            return tupleBase.ushortSzudzik2tupleReverse(z);
+        }
 
-        public static uint[] reverse(ulong z) {
-            return _2tuple.reverse(z);
-        } 
+        public static uint[] reverse(ulong z)
+        {
+            return tupleBase.uintSzudzik2tupleReverse(z);
+        }
 
         #endregion
     }
