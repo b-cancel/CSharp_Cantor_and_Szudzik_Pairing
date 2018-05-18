@@ -3,7 +3,7 @@
     /// <summary>
     /// Description: public functions for 5 tuple pairing
     /// Programmer: Bryan Cancel
-    /// Combine Sequence ((a,b) , [(c,d),(e)]) -> z
+    /// Combine Sequence [(a,b) , (c,d,e)] -> z
     /// 
     /// note: currently using 2tuple pairing multiple times
     /// could simplify by using 2tupe(2tuple(a,b), 3tuple(c,d,e))
@@ -380,7 +380,7 @@
 
         #region Reverse
 
-        //((a,b) , [(c,d),(e)])
+        //[(a,b) , (c,d,e)]
         public static byte[] reverse(ulong z) //5 bytes... rounds to 8 bytes = 4 ushorts = 2 uints = 1 ulong
         {
             uint[] P1_P2 = _2tuple.reverse(z);

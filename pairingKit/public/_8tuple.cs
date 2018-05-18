@@ -3,7 +3,7 @@
     /// <summary>
     /// Description: public functions for 8 tuple pairing
     /// Programmer: Bryan Cancel
-    /// Combine Sequence ([(a,b),(c,d)] , [(e,f),(g,h)]) -> z
+    /// Combine Sequence [(a,b,c,d) , (e,f,g,h)] -> z
     /// 
     /// note: currently using 2tuple pairing multiple times
     /// could simplify by using 2tupe(4tuple(a,b,c,d), 4tuple(e,f,g))
@@ -90,16 +90,16 @@
 
         #region byte byte byte byte byte byte byte [2]
 
-        //last byte ([(a,b),(c,d)],[(e,f),g])
+        //last byte
         public static ulong combine(byte a, byte b, byte c, byte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g,h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, byte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -109,13 +109,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, byte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, byte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -129,13 +129,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, byte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, byte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -145,13 +145,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, byte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, byte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -169,13 +169,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, byte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, byte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -185,13 +185,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, byte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, byte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -205,13 +205,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, byte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, byte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -221,13 +221,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, byte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, byte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -249,13 +249,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, sbyte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, sbyte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -265,13 +265,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, sbyte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, sbyte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -285,13 +285,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, sbyte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, sbyte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -301,13 +301,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, sbyte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, sbyte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -325,13 +325,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, sbyte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, sbyte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -341,13 +341,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, sbyte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, sbyte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -361,13 +361,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, sbyte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, sbyte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -377,13 +377,13 @@
         //last byte
         public static ulong combine(byte a, byte b, byte c, sbyte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, byte c, sbyte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -409,13 +409,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, byte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, byte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -425,13 +425,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, byte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, byte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -445,13 +445,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, byte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, byte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -461,13 +461,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, byte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, byte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -485,13 +485,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, byte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, byte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -501,13 +501,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, byte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, byte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -521,13 +521,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, byte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, byte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -537,13 +537,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, byte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, byte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -565,13 +565,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -581,13 +581,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -601,13 +601,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -617,13 +617,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -641,13 +641,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -657,13 +657,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -677,13 +677,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -693,13 +693,13 @@
         //last byte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, byte b, sbyte c, sbyte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -729,13 +729,13 @@
         //last byte ([(a,b),(c,d)],[e,f])
         public static ulong combine(byte a, sbyte b, byte c, byte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, byte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -745,13 +745,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, byte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, byte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -765,13 +765,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, byte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, byte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -781,13 +781,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, byte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, byte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -805,13 +805,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, byte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, byte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -821,13 +821,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, byte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, byte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -841,13 +841,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, byte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, byte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -857,13 +857,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, byte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, byte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -885,13 +885,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -901,13 +901,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -921,13 +921,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -937,13 +937,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -961,13 +961,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -977,13 +977,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -997,13 +997,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1013,13 +1013,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, byte c, sbyte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1045,13 +1045,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1061,13 +1061,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1081,13 +1081,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1097,13 +1097,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1121,13 +1121,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1137,13 +1137,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1157,13 +1157,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1173,13 +1173,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, byte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1201,13 +1201,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1217,13 +1217,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1237,13 +1237,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1253,13 +1253,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1277,13 +1277,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1293,13 +1293,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1313,13 +1313,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1329,13 +1329,13 @@
         //last byte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(byte a, sbyte b, sbyte c, sbyte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1369,13 +1369,13 @@
         //last byte ([(a,b),(c,d)],[(e,f),g])
         public static ulong combine(sbyte a, byte b, byte c, byte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, byte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1385,13 +1385,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, byte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, byte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1405,13 +1405,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, byte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, byte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1421,13 +1421,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, byte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, byte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1445,13 +1445,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, byte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, byte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1461,13 +1461,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, byte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, byte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1481,13 +1481,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, byte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, byte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1497,13 +1497,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, byte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, byte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1525,13 +1525,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1541,13 +1541,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1561,13 +1561,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1577,13 +1577,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1601,13 +1601,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1617,13 +1617,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1637,13 +1637,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1653,13 +1653,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, byte c, sbyte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1685,13 +1685,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1701,13 +1701,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1721,13 +1721,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1737,13 +1737,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1761,13 +1761,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1777,13 +1777,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1797,13 +1797,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1813,13 +1813,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, byte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1841,13 +1841,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1857,13 +1857,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1877,13 +1877,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1893,13 +1893,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1917,13 +1917,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1933,13 +1933,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1953,13 +1953,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -1969,13 +1969,13 @@
         //last byte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, byte b, sbyte c, sbyte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2005,13 +2005,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2021,13 +2021,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2041,13 +2041,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2057,13 +2057,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2081,13 +2081,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2097,13 +2097,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2117,13 +2117,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2133,13 +2133,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, byte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2161,13 +2161,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2177,13 +2177,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2197,13 +2197,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2213,13 +2213,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2237,13 +2237,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2253,13 +2253,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2273,13 +2273,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2289,13 +2289,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, byte c, sbyte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2321,13 +2321,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2337,13 +2337,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2357,13 +2357,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2373,13 +2373,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2397,13 +2397,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2413,13 +2413,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2433,13 +2433,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2449,13 +2449,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, byte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2477,13 +2477,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, byte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, byte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2493,13 +2493,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, byte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, byte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2513,13 +2513,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, byte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, byte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2529,13 +2529,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, byte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, byte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2553,13 +2553,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, sbyte e, byte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, sbyte e, byte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2569,13 +2569,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, sbyte e, byte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, sbyte e, byte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2589,13 +2589,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, sbyte e, sbyte f, byte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, sbyte e, sbyte f, byte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2605,13 +2605,13 @@
         //last byte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, sbyte e, sbyte f, sbyte g, byte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         //last sbyte
         public static ulong combine(sbyte a, sbyte b, sbyte c, sbyte d, sbyte e, sbyte f, sbyte g, sbyte h)
         {
-            return _2tuple.combine(_2tuple.combine(_2tuple.combine(a, b), _2tuple.combine(c, d)), _2tuple.combine(_2tuple.combine(e, f), _2tuple.combine(g, h)));
+            return _2tuple.combine(_4tuple.combine(a, b, c, d), _4tuple.combine(e, f, g, h));
         }
 
         #endregion
@@ -2632,7 +2632,7 @@
 
         #region Reverse
 
-        //([(a,b),(c,d)] , [(e,f),(g,h)])
+        //[(a,b,c,d) , (e,f,g,h)]
         public static byte[] reverse(ulong z) //rounds to 8 bytes = 4 ushorts = 2 uints = 1 ulong
         {
             uint[] P1_P2 = _2tuple.reverse(z);
