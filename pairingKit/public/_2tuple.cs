@@ -48,27 +48,27 @@
         #region starting with sbyte
 
         public static ushort combine(sbyte a, sbyte b) {
-            return tupleBase.byteSzudzik2tupleCombine(tupleBase.sbyteToByte(a), tupleBase.sbyteToByte(b));
+            return tupleBase.byteSzudzik2tupleCombine((byte)a, (byte)b);
         } //return (ushort)
 
         public static ushort combine(sbyte a, byte b) {
-            return tupleBase.byteSzudzik2tupleCombine(tupleBase.sbyteToByte(a), b);
+            return tupleBase.byteSzudzik2tupleCombine((byte)a, b);
         } //return (ushort)
 
         public static uint combine(sbyte a, short b) {
-            return tupleBase.ushortSzudzik2tupleCombine((ushort)tupleBase.sbyteToByte(a), tupleBase.shortToUshort(b));
+            return tupleBase.ushortSzudzik2tupleCombine((ushort)a, (ushort)b);
         } //return (uint)
 
         public static uint combine(sbyte a, ushort b) {
-            return tupleBase.ushortSzudzik2tupleCombine((ushort)tupleBase.sbyteToByte(a), b);
+            return tupleBase.ushortSzudzik2tupleCombine((ushort)a, b);
         } //return (uint)
 
         public static ulong combine(sbyte a, int b) {
-            return tupleBase.uintSzudzik2tupleCombine((uint)tupleBase.sbyteToByte(a), tupleBase.intToUint(b));
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(sbyte a, uint b) {
-            return tupleBase.uintSzudzik2tupleCombine((uint)tupleBase.sbyteToByte(a), b);
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, b);
         } //return (ulong)
 
         #endregion
@@ -76,7 +76,7 @@
         #region starting with byte
 
         public static ushort combine(byte a, sbyte b) {
-            return tupleBase.byteSzudzik2tupleCombine(a, tupleBase.sbyteToByte(b));
+            return tupleBase.byteSzudzik2tupleCombine(a, (byte)b);
         } //return (ushort)
 
         public static ushort combine(byte a, byte b) {
@@ -84,19 +84,19 @@
         } //return (ushort)
 
         public static uint combine(byte a, short b) {
-            return tupleBase.ushortSzudzik2tupleCombine((ushort)a, tupleBase.shortToUshort(b));
+            return tupleBase.ushortSzudzik2tupleCombine(a, (ushort)b);
         } //return (uint)
 
         public static uint combine(byte a, ushort b) {
-            return tupleBase.ushortSzudzik2tupleCombine((ushort)a, b);
+            return tupleBase.ushortSzudzik2tupleCombine(a, b);
         } //return (uint)
 
         public static ulong combine(byte a, int b) {
-            return tupleBase.uintSzudzik2tupleCombine((uint)a, tupleBase.intToUint(b));
+            return tupleBase.uintSzudzik2tupleCombine(a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(byte a, uint b) {
-            return tupleBase.uintSzudzik2tupleCombine((uint)a, b);
+            return tupleBase.uintSzudzik2tupleCombine(a, b);
         } //return (ulong)
 
         #endregion
@@ -104,27 +104,27 @@
         #region starting with short
 
         public static uint combine(short a, sbyte b) {
-            return tupleBase.ushortSzudzik2tupleCombine(tupleBase.shortToUshort(a), (ushort)tupleBase.sbyteToByte(b));
+            return tupleBase.ushortSzudzik2tupleCombine((ushort)a, (ushort)b);
         } //return (uint)
 
         public static uint combine(short a, byte b) {
-            return tupleBase.ushortSzudzik2tupleCombine(tupleBase.shortToUshort(a), (ushort)b);
+            return tupleBase.ushortSzudzik2tupleCombine((ushort)a, b);
         } //return (uint)
 
         public static uint combine(short a, short b) {
-            return tupleBase.ushortSzudzik2tupleCombine(tupleBase.shortToUshort(a), tupleBase.shortToUshort(b));
+            return tupleBase.ushortSzudzik2tupleCombine((ushort)a, (ushort)b);
         } //return (uint)
 
         public static uint combine(short a, ushort b) {
-            return tupleBase.ushortSzudzik2tupleCombine(tupleBase.shortToUshort(a), b);
+            return tupleBase.ushortSzudzik2tupleCombine((ushort)a, b);
         } //return (uint)
 
         public static ulong combine(short a, int b) {
-            return tupleBase.uintSzudzik2tupleCombine((uint)a, tupleBase.intToUint(b));
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(short a, uint b) {
-            return tupleBase.uintSzudzik2tupleCombine((uint)tupleBase.shortToUshort(a), b);
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, b);
         } //return (ulong)
 
         #endregion
@@ -132,15 +132,15 @@
         #region starting with ushort
 
         public static uint combine(ushort a, sbyte b) {
-            return tupleBase.ushortSzudzik2tupleCombine(a, (ushort)tupleBase.sbyteToByte(b));
-        } //return (uint)
-
-        public static uint combine(ushort a, byte b) {
             return tupleBase.ushortSzudzik2tupleCombine(a, (ushort)b);
         } //return (uint)
 
+        public static uint combine(ushort a, byte b) {
+            return tupleBase.ushortSzudzik2tupleCombine(a, b);
+        } //return (uint)
+
         public static uint combine(ushort a, short b) {
-            return tupleBase.ushortSzudzik2tupleCombine(a, tupleBase.shortToUshort(b));
+            return tupleBase.ushortSzudzik2tupleCombine(a, (ushort)b);
         } //return (uint)
 
         public static uint combine(ushort a, ushort b) {
@@ -148,11 +148,11 @@
         } //return (uint)
 
         public static ulong combine(ushort a, int b) {
-            return tupleBase.uintSzudzik2tupleCombine((uint)a, tupleBase.intToUint(b));
+            return tupleBase.uintSzudzik2tupleCombine(a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(ushort a, uint b) {
-            return tupleBase.uintSzudzik2tupleCombine((uint)a, b);
+            return tupleBase.uintSzudzik2tupleCombine(a, b);
         } //return (ulong)
 
         #endregion
@@ -160,27 +160,27 @@
         #region starting with int
 
         public static ulong combine(int a, sbyte b) {
-            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(a), (uint)tupleBase.sbyteToByte(b));
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(int a, byte b) {
-            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(a), (uint)b);
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, b);
         } //return (ulong)
 
         public static ulong combine(int a, short b) {
-            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(a), (uint)tupleBase.shortToUshort(b));
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(int a, ushort b) {
-            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(a), (uint)b);
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, b);
         } //return (ulong)
 
         public static ulong combine(int a, int b) {
-            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(a), tupleBase.intToUint(b));
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(int a, uint b) {
-            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(a), b);
+            return tupleBase.uintSzudzik2tupleCombine((uint)a, b);
         } //return (ulong)
 
         #endregion
@@ -188,23 +188,23 @@
         #region starting with uint
 
         public static ulong combine(uint a, sbyte b) {
-            return tupleBase.uintSzudzik2tupleCombine(a, (uint)tupleBase.sbyteToByte(b));
+            return tupleBase.uintSzudzik2tupleCombine(a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(uint a, byte b) {
-            return tupleBase.uintSzudzik2tupleCombine(a, (uint)b);
+            return tupleBase.uintSzudzik2tupleCombine(a, b);
         } //return (ulong)
 
         public static ulong combine(uint a, short b) {
-            return tupleBase.uintSzudzik2tupleCombine(a, (uint)tupleBase.shortToUshort(b));
-        } //return (ulong)
-
-        public static ulong combine(uint a, ushort b) {
             return tupleBase.uintSzudzik2tupleCombine(a, (uint)b);
         } //return (ulong)
 
+        public static ulong combine(uint a, ushort b) {
+            return tupleBase.uintSzudzik2tupleCombine(a, b);
+        } //return (ulong)
+
         public static ulong combine(uint a, int b) {
-            return tupleBase.uintSzudzik2tupleCombine(a, tupleBase.intToUint(b));
+            return tupleBase.uintSzudzik2tupleCombine(a, (uint)b);
         } //return (ulong)
 
         public static ulong combine(uint a, uint b) {
