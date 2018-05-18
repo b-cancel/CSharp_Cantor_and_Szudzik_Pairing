@@ -3,7 +3,7 @@
     /// <summary>
     /// Description: public functions for 3 tuple pairing
     /// Programmer: Bryan Cancel
-    /// Combine Sequence [(a,b),c] -> z
+    /// Combine Sequence [(a,b) , c] -> z
     /// </summary>
 
     /*
@@ -48,7 +48,7 @@
 
     public static class _3tuple //2 type ranges [(byte/sbyte)|(ushort/short)]
     {
-        #region (X,Y) -> Z
+        #region Combine
 
         //(sbyte/byte),(short/ushort) [4]
         //[4]^3 = 64 possible combos [sets of 16]
@@ -57,90 +57,90 @@
 
         //---2nd sbyte
 
-        public static uint combine(sbyte x, sbyte y, sbyte z)
+        public static uint combine(sbyte a, sbyte b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
-        public static uint combine(sbyte x, sbyte y, byte z)
+        public static uint combine(sbyte a, sbyte b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint) 
 
-        public static uint combine(sbyte x, sbyte y, short z)
+        public static uint combine(sbyte a, sbyte b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint) 
 
-        public static uint combine(sbyte x, sbyte y, ushort z)
+        public static uint combine(sbyte a, sbyte b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint) 
 
         //---2nd byte
 
-        public static uint combine(sbyte x, byte y, sbyte z)
+        public static uint combine(sbyte a, byte b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
-        public static uint combine(sbyte x, byte y, byte z)
+        public static uint combine(sbyte a, byte b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
-        public static uint combine(sbyte x, byte y, short z)
+        public static uint combine(sbyte a, byte b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
-        public static uint combine(sbyte x, byte y, ushort z)
+        public static uint combine(sbyte a, byte b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
         //---2nd short
 
-        public static ulong combine(sbyte x, short y, sbyte z)
+        public static ulong combine(sbyte a, short b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(sbyte x, short y, byte z)
+        public static ulong combine(sbyte a, short b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(sbyte x, short y, short z)
+        public static ulong combine(sbyte a, short b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(sbyte x, short y, ushort z)
+        public static ulong combine(sbyte a, short b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         //---2nd ushort
 
-        public static ulong combine(sbyte x, ushort y, sbyte z)
+        public static ulong combine(sbyte a, ushort b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(sbyte x, ushort y, byte z)
+        public static ulong combine(sbyte a, ushort b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(sbyte x, ushort y, short z)
+        public static ulong combine(sbyte a, ushort b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(sbyte x, ushort y, ushort z)
+        public static ulong combine(sbyte a, ushort b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         #endregion
@@ -149,90 +149,90 @@
 
         //---2nd sbyte
 
-        public static uint combine(byte x, sbyte y, sbyte z)
+        public static uint combine(byte a, sbyte b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
-        public static uint combine(byte x, sbyte y, byte z)
+        public static uint combine(byte a, sbyte b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint) 
 
-        public static uint combine(byte x, sbyte y, short z)
+        public static uint combine(byte a, sbyte b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint) 
 
-        public static uint combine(byte x, sbyte y, ushort z)
+        public static uint combine(byte a, sbyte b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint) 
 
         //---2nd byte
 
-        public static uint combine(byte x, byte y, sbyte z)
+        public static uint combine(byte a, byte b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
-        public static uint combine(byte x, byte y, byte z)
+        public static uint combine(byte a, byte b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
-        public static uint combine(byte x, byte y, short z)
+        public static uint combine(byte a, byte b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
-        public static uint combine(byte x, byte y, ushort z)
+        public static uint combine(byte a, byte b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (uint)
 
         //---2nd short
 
-        public static ulong combine(byte x, short y, sbyte z)
+        public static ulong combine(byte a, short b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(byte x, short y, byte z)
+        public static ulong combine(byte a, short b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(byte x, short y, short z)
+        public static ulong combine(byte a, short b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(byte x, short y, ushort z)
+        public static ulong combine(byte a, short b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         //---2nd ushort
 
-        public static ulong combine(byte x, ushort y, sbyte z)
+        public static ulong combine(byte a, ushort b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(byte x, ushort y, byte z)
+        public static ulong combine(byte a, ushort b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(byte x, ushort y, short z)
+        public static ulong combine(byte a, ushort b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(byte x, ushort y, ushort z)
+        public static ulong combine(byte a, ushort b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         #endregion
@@ -241,90 +241,90 @@
 
         //---2nd sbyte
 
-        public static ulong combine(short x, sbyte y, sbyte z)
+        public static ulong combine(short a, sbyte b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, sbyte y, byte z)
+        public static ulong combine(short a, sbyte b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong) 
 
-        public static ulong combine(short x, sbyte y, short z)
+        public static ulong combine(short a, sbyte b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong) 
 
-        public static ulong combine(short x, sbyte y, ushort z)
+        public static ulong combine(short a, sbyte b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong) 
 
         //---2nd byte
 
-        public static ulong combine(short x, byte y, sbyte z)
+        public static ulong combine(short a, byte b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, byte y, byte z)
+        public static ulong combine(short a, byte b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, byte y, short z)
+        public static ulong combine(short a, byte b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, byte y, ushort z)
+        public static ulong combine(short a, byte b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         //---2nd short
 
-        public static ulong combine(short x, short y, sbyte z)
+        public static ulong combine(short a, short b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, short y, byte z)
+        public static ulong combine(short a, short b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, short y, short z)
+        public static ulong combine(short a, short b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, short y, ushort z)
+        public static ulong combine(short a, short b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         //---2nd ushort
 
-        public static ulong combine(short x, ushort y, sbyte z)
+        public static ulong combine(short a, ushort b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, ushort y, byte z)
+        public static ulong combine(short a, ushort b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, ushort y, short z)
+        public static ulong combine(short a, ushort b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(short x, ushort y, ushort z)
+        public static ulong combine(short a, ushort b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         #endregion
@@ -333,98 +333,99 @@
 
         //---2nd sbyte
 
-        public static ulong combine(ushort x, sbyte y, sbyte z)
+        public static ulong combine(ushort a, sbyte b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, sbyte y, byte z)
+        public static ulong combine(ushort a, sbyte b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong) 
 
-        public static ulong combine(ushort x, sbyte y, short z)
+        public static ulong combine(ushort a, sbyte b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong) 
 
-        public static ulong combine(ushort x, sbyte y, ushort z)
+        public static ulong combine(ushort a, sbyte b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong) 
 
         //---2nd byte
 
-        public static ulong combine(ushort x, byte y, sbyte z)
+        public static ulong combine(ushort a, byte b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, byte y, byte z)
+        public static ulong combine(ushort a, byte b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, byte y, short z)
+        public static ulong combine(ushort a, byte b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, byte y, ushort z)
+        public static ulong combine(ushort a, byte b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         //---2nd short
 
-        public static ulong combine(ushort x, short y, sbyte z)
+        public static ulong combine(ushort a, short b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, short y, byte z)
+        public static ulong combine(ushort a, short b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, short y, short z)
+        public static ulong combine(ushort a, short b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, short y, ushort z)
+        public static ulong combine(ushort a, short b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         //---2nd ushort
 
-        public static ulong combine(ushort x, ushort y, sbyte z)
+        public static ulong combine(ushort a, ushort b, sbyte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, ushort y, byte z)
+        public static ulong combine(ushort a, ushort b, byte c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, ushort y, short z)
+        public static ulong combine(ushort a, ushort b, short c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
-        public static ulong combine(ushort x, ushort y, ushort z)
+        public static ulong combine(ushort a, ushort b, ushort c)
         {
-            return _2tuple.combine(_2tuple.combine(x, y), z);
+            return _2tuple.combine(_2tuple.combine(a, b), c);
         } //return (ulong)
 
         #endregion
 
         #endregion
 
-        #region Z -> (X,Y)
+        #region Reverse
 
+        //[(a,b) , c]
         public static byte[] reverse(uint z) //3 bytes... rounds to 4 bytes = 2 ushorts = 1 uint
         {
             ushort[] ABc = _2tuple.reverse(z);
@@ -432,6 +433,7 @@
             return new byte[] {ab[0], ab[1], (byte)ABc[1]};
         }
 
+        //[(a,b) , c]
         public static ushort[] reverse(ulong z) //2 ushorts... round to 4 ushorts = 2 uints = 1 ulong
         {
             uint[] ABc = _2tuple.reverse(z);
