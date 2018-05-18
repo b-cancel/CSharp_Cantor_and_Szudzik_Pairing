@@ -5,23 +5,7 @@ namespace pairingKit
     /// <summary>
     /// Description: pairingKit using the Cantor Pairing & Szudzik Pairing Functions
     /// Programmer: Bryan Cancel
-    /// Reason For Existance: 
-    ///     -pairing functions are great but they have their limits and I would like to clearly communicate them
-    ///     -its only a bijection from NxN -> N (Natural Numbers, 0 included)
-    ///         -I would like to also have a bijection from 
-    ///             -ZxZ -> Z (with a bijection from N to Z)
-    ///             -QxQ -> Q (with a bijection from 2 N to 1 Q)
-    ///     -C# types must be used carefully given the above
-    /// Sources:
-    ///     https://stackoverflow.com/questions/919612/mapping-two-integers-to-one-in-a-unique-and-deterministic-way [Cantor or Szudzik]
-    ///     http://szudzik.com/ElegantPairing.pdf [Szudzik]
-    /// Assumptions: 
-    ///     -you might want to test Cantor or Szudzik Pairing
-    ///     -Doing Math with types that hold less data is faster 
-    ///     -conversion between types takes up time BUT the speed you gain from using types that hold less data make this extra time negligible
-    ///     -the most effective math is between 2 pairs of the same type (since conversions also have some cost)    
-    ///     -you might want to pair up 2 variables of all types [(byte/sbyte)|(ushort/short)|(uint/int)|(ulong/long)]
-    ///     -you do not want to use BigInteger
+    /// Reason For Existance: Provides the BASE For all the _Ntuple classes (Refer to the Documentation for Details)
     /// </summary>
 
     public class tupleBase
@@ -81,8 +65,6 @@ namespace pairingKit
 
         #region For 8 Bit Integers
 
-        //-----using BYTE
-
         internal static uint byteCantor2tupleCombine(byte x, byte y)
         {
             return (uint)((((x + y) * (x + y + 1)) / 2) + y);
@@ -103,38 +85,9 @@ namespace pairingKit
             return new byte[] { x, y };
         }
 
-        //-----using SBYTE (using BYTE functions with slight adjustments)
-
-        internal static uint sbyteCantor2tupleCombine(sbyte x, sbyte y)
-        {
-            return byteCantor2tupleCombine(tupleBase.sbyteToByte(x), tupleBase.sbyteToByte(y));
-        }
-
-        internal static sbyte[] sbyteCantor2tupleReverse(uint z)
-        {
-            byte[] byteRev = byteCantor2tupleReverse(z);
-            return new sbyte[] { tupleBase.byteToSbyte(byteRev[0]), tupleBase.byteToSbyte(byteRev[1]) };
-        }
-
         #endregion
 
-        #region For 16,32,64 [Szudik is Faster]
-
-        //NOTE: testing with sbytes using only unity and visual studios running in my pluged in laptop
-        //I did performance testing using "stopwatch" from "using System.Diagnostics;"
-        //---
-        //Cantor takes [34] Ticks for both (pairing + reverse) commands
-        //(pairing takes [3] Ticks) (reverse takes [31] Ticks) [when tested individually]
-        //31 + 3 = 34 == 34
-        //---
-        //Szudik takes a solid [31] Ticks for both (pairing + reverse) commands
-        //(pairing takes [4] Ticks) (reverse takes [29] Ticks) [when tested individually]
-        //29 + 4 = 33 != 31
-
-        //Because of...
-        //(1) the very slight difference in performace between Cantor and Szudzik
-        //(2) and the fact that Szudzik takes up less space than Cantor
-        //[*] It makes no sense to  continue to implement Functions for Cantor
+        #region For 16,32,64 [Szudik is Better]
 
         #region For 16 Bit Integers
 
@@ -200,8 +153,6 @@ namespace pairingKit
 
         #region For 8 Bit Integers
 
-        //-----using BYTE
-
         internal static ushort byteSzudzik2tupleCombine(byte x, byte y)
         {
             if (x != Math.Max(x, y))
@@ -223,24 +174,9 @@ namespace pairingKit
                 return new byte[] { (byte)zSpecial1, (byte)(zSpecial2 - zSpecial1) };
         }
 
-        //-----using SBYTE (using BYTE functions with slight adjustments)
-
-        internal static ushort sbyteSzudzik2tupleCombine(sbyte x, sbyte y)
-        {
-            return byteSzudzik2tupleCombine(tupleBase.sbyteToByte(x), tupleBase.sbyteToByte(y));
-        }
-
-        internal static sbyte[] sbyteSzudzik2tupleReverse(ushort z)
-        {
-            byte[] byteRev = byteSzudzik2tupleReverse(z);
-            return new sbyte[] { tupleBase.byteToSbyte(byteRev[0]), tupleBase.byteToSbyte(byteRev[1]) };
-        }
-
         #endregion
 
         #region For 16 Bit Integers
-
-        //-----using USHORT
 
         internal static uint ushortSzudzik2tupleCombine(ushort x, ushort y)
         {
@@ -261,24 +197,9 @@ namespace pairingKit
                 return new ushort[] { (ushort)zSpecial1, (ushort)(zSpecial2 - zSpecial1) };
         }
 
-        //-----using SHORT (using USHORT functions with slight adjustments)
-
-        internal static uint shortSzudzik2tupleCombine(short x, short y)
-        {
-            return ushortSzudzik2tupleCombine(tupleBase.shortToUshort(x), tupleBase.shortToUshort(y));
-        }
-
-        internal static short[] shortSzudzik2tupleReverse(uint z)
-        {
-            ushort[] ushortRev = ushortSzudzik2tupleReverse(z);
-            return new short[] { tupleBase.ushortToShort(ushortRev[0]), tupleBase.ushortToShort(ushortRev[1]) };
-        }
-
         #endregion
 
         #region For 32 Bit Integers
-
-        //-----using USHORT
 
         internal static ulong uintSzudzik2tupleCombine(uint x, uint y)
         {
@@ -297,19 +218,6 @@ namespace pairingKit
                 return new uint[] { (uint)zSpecial2, (uint)zSpecial1 };
             else
                 return new uint[] { (uint)zSpecial1, (uint)(zSpecial2 - zSpecial1) };
-        }
-
-        //-----using SHORT (using USHORT functions with slight adjustments)
-
-        internal static ulong intSzudzik2tupleCombine(int x, int y)
-        {
-            return uintSzudzik2tupleCombine(tupleBase.intToUint(x), tupleBase.intToUint(y));
-        }
-
-        internal static int[] intSzudzik2tupleReverse(ulong z)
-        {
-            uint[] uintRev = uintSzudzik2tupleReverse(z);
-            return new int[] { tupleBase.uintToInt(uintRev[0]), tupleBase.uintToInt(uintRev[1]) };
         }
 
         #endregion

@@ -2,26 +2,53 @@
 {
     /// <summary>
     /// Description: public functions for 2 tuple pairing
-    //      1. cast the smaller type into the larger type
-    //      2. use the version of the pairing function that uses 2 of the larger types in BASE
     /// Programmer: Bryan Cancel
-    /// Reason For Existance: 
-    ///     -you might want to pair any 2 integral numbers
     /// Combine Sequence (a,b) -> z
-    /// Reverse Sequence z -> (a,b)
     /// </summary>
+
+    /*
+    * C# Integral Types
+    * 
+    * -------------------------using BYTES
+    * sbyte	-128 to 127	Signed 8-bit integer
+    * byte	    0 to 255	Unsigned 8-bit integer
+    * COMBOS: (25_6)^2 = 65,536 [exactly what ushort can store]
+    * 
+    * SZUDZIK PAIR MAX: (25_6)^2 = 65,536 [exactly what ushort can store]
+    * 
+    * -------------------------using SHORTS
+    * short	-32,768 to 32,767	Signed 16-bit integer
+    * ushort	0 to 65,535	Unsigned 16-bit integer
+    * COMBOS: (65,53_6)^2 = 4,294,967,296 [exactly what uint can store]
+    * 
+    * SZUDZIK PAIR MAX: (65,53_6)^2 = 4,294,967,296 [exactly what uint can store]
+    * 
+    * -------------------------using INTS
+    * int	    -2,147,483,648 to 2,147,483,647	Signed 32-bit integer
+    * uint	    0 to 4,294,967,295	Unsigned 32-bit integer
+    * COMBOS: (4,294,967,29_6)^2 = 18,446,744,073,709,551,616 [exactly what ulong can store]
+    * 
+    * SZUDZIK PAIR MAX: (4,294,967,29_6)^2 = 18,446,744,073,709,551,616 [exactly what ulong can store]
+    * 
+    * -------------------------using LONGS-------------------------STOP(I dont want to use BigInteger)-------------------------
+    * long	    -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807	Signed 64-bit integer
+    * ulong	0 to 18,446,744,073,709,551,615	Unsigned 64-bit integer
+    * COMBOS: (18,446,744,073,709,551,61_6)^2 = 340,282,366,920,938,463,463,374,607,431,768,211,456 [perhaps using Big Integer]
+    * 
+    * SZUDZIK PAIR MAX: (18,446,744,073,709,551,61_6)^2 = 340,282,366,920,938,463,463,374,607,431,768,211,456 [perhaps using Big Integer]
+    */
 
     public static class _2tuple //3 type ranges [(byte/sbyte)|(ushort/short)|(uint,int)]
     {
         #region (X,Y) -> Z
 
         //(sbyte/byte),(short/ushort),(int/uint) [6]
-        //[6]^2 = 36 possible combos
+        //[6]^2 = 36 possible combos [sets of 6]
 
         #region starting with sbyte
 
         public static ushort combine(sbyte x, sbyte y) {
-            return tupleBase.sbyteSzudzik2tupleCombine(x, y);
+            return tupleBase.byteSzudzik2tupleCombine(tupleBase.sbyteToByte(x), tupleBase.sbyteToByte(y));
         } //return (ushort)
 
         public static ushort combine(sbyte x, byte y) {
@@ -29,7 +56,7 @@
         } //return (ushort)
 
         public static uint combine(sbyte x, short y) {
-            return tupleBase.shortSzudzik2tupleCombine((short)x, y);
+            return tupleBase.ushortSzudzik2tupleCombine((ushort)tupleBase.sbyteToByte(x), tupleBase.shortToUshort(y));
         } //return (uint)
 
         public static uint combine(sbyte x, ushort y) {
@@ -37,7 +64,7 @@
         } //return (uint)
 
         public static ulong combine(sbyte x, int y) {
-            return tupleBase.intSzudzik2tupleCombine((int)x, y);
+            return tupleBase.uintSzudzik2tupleCombine((uint)tupleBase.sbyteToByte(x), tupleBase.intToUint(y));
         } //return (ulong)
 
         public static ulong combine(sbyte x, uint y) {
@@ -77,7 +104,7 @@
         #region starting with short
 
         public static uint combine(short x, sbyte y) {
-            return tupleBase.shortSzudzik2tupleCombine(x, (short)y);
+            return tupleBase.ushortSzudzik2tupleCombine(tupleBase.shortToUshort(x), (ushort)tupleBase.sbyteToByte(y));
         } //return (uint)
 
         public static uint combine(short x, byte y) {
@@ -85,7 +112,7 @@
         } //return (uint)
 
         public static uint combine(short x, short y) {
-            return tupleBase.shortSzudzik2tupleCombine(x, y);
+            return tupleBase.ushortSzudzik2tupleCombine(tupleBase.shortToUshort(x), tupleBase.shortToUshort(y));
         } //return (uint)
 
         public static uint combine(short x, ushort y) {
@@ -93,7 +120,7 @@
         } //return (uint)
 
         public static ulong combine(short x, int y) {
-            return tupleBase.intSzudzik2tupleCombine((int)x, y);
+            return tupleBase.uintSzudzik2tupleCombine((uint)x, tupleBase.intToUint(y));
         } //return (ulong)
 
         public static ulong combine(short x, uint y) {
@@ -133,7 +160,7 @@
         #region starting with int
 
         public static ulong combine(int x, sbyte y) {
-            return tupleBase.intSzudzik2tupleCombine(x, (int)y);
+            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(x), (uint)tupleBase.sbyteToByte(y));
         } //return (ulong)
 
         public static ulong combine(int x, byte y) {
@@ -141,7 +168,7 @@
         } //return (ulong)
 
         public static ulong combine(int x, short y) {
-            return tupleBase.intSzudzik2tupleCombine(x, (int)y);
+            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(x), (uint)tupleBase.shortToUshort(y));
         } //return (ulong)
 
         public static ulong combine(int x, ushort y) {
@@ -149,7 +176,7 @@
         } //return (ulong)
 
         public static ulong combine(int x, int y) {
-            return tupleBase.intSzudzik2tupleCombine(x, y);
+            return tupleBase.uintSzudzik2tupleCombine(tupleBase.intToUint(x), tupleBase.intToUint(y));
         } //return (ulong)
 
         public static ulong combine(int x, uint y) {

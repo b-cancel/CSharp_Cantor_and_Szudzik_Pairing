@@ -1,10 +1,12 @@
 ﻿namespace pairingKit
 {
     /// <summary>
-    /// Description: public functions for 6 tuple pairing
+    /// Description: public functions for 7 tuple pairing
     /// Programmer: Bryan Cancel
     /// Combine Sequence ([(a,b),(c,d)],[(e,f),g]) -> z
-    /// Reverse Sequence 
+    /// 
+    /// note: currently using 2tuple pairing multiple times
+    /// could simplify by using 2tupe(4tuple(a,b,c,d), 3tuple(e,f,g))
     /// </summary>
 
     /*
@@ -23,7 +25,7 @@
      *      ([ushort],ushort) -> [uint] [(EF),(G)]
      *      ([uint],[uint]) -> [ulong] ([(AB),(CD)],[(EF),(G)])
      * 
-     * -------------------------using SHORTS
+     * -------------------------using SHORTS-------------------------STOP(I dont want to use BigInteger)-------------------------
      * short	-32,768 to 32,767	Signed 16-bit integer
      * ushort	0 to 65,535	Unsigned 16-bit integer
      * COMBOS: (65,53_6)^2 = 4,294,967,296 [exactly what uint can store]
@@ -34,7 +36,7 @@
      *      ([uint],[uint]) -> [ulong] -> [(AB),(CD)]
      *      (ushort,ushort) -> [uint] -> (EF)
      *      ([uint],uint) -> [ulong] -> [(EF),(G)]
-     *      ([ulong],[ulong]) -> [BigInteger] -> ([(AB),(CD)],[(EF),(G)])          STOP
+     *      ([ulong],[ulong]) -> [BigInteger] -> ([(AB),(CD)],[(EF),(G)])          
      * 
      * -------------------------using INTS
      * int	    -2,147,483,648 to 2,147,483,647	Signed 32-bit integer
@@ -47,7 +49,7 @@
      *      ([ulong],[ulong]) -> [BigInteger] [(AB),(CD)]
      *      (uint,uint) -> [ulong] (EF)
      *      ([ulong],ulong) -> [BigInteger] [(EF),(G)]
-     *      ([BigInteger],[BigInteger]) -> [BigInteger] ([(AB),(CD)],[(EF),(G)])            DONT
+     *      ([BigInteger],[BigInteger]) -> [BigInteger] ([(AB),(CD)],[(EF),(G)])          
      * 
      * -------------------------using LONGS
      * long	    -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807	Signed 64-bit integer
@@ -60,7 +62,7 @@
      *      ([BigInteger],[BigInteger]) -> [BigInteger] [(AB),(CD)]
      *      (ulong,ulong) -> [BigInteger] (EF)
      *      ([BigInteger],BigInteger) -> [BigInteger] [(EF),(G)]
-     *      ([BigInteger],[BigInteger]) -> [BigInteger] ([(AB),(CD)],[(EF),(G)])            DONT
+     *      ([BigInteger],[BigInteger]) -> [BigInteger] ([(AB),(CD)],[(EF),(G)])           
      */
 
     public static class _7tuple //1 type range [(byte/sbyte)]
@@ -68,7 +70,7 @@
         #region (X,Y) -> Z
 
         //(sbyte/byte) [2]
-        //[2]^7 = 128 possible combos
+        //[2]^7 = 128 possible combos [sets of 64]
 
         #region byte
 

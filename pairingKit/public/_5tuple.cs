@@ -4,7 +4,9 @@
     /// Description: public functions for 5 tuple pairing
     /// Programmer: Bryan Cancel
     /// Combine Sequence ((a,b),[(c,d),(e)]) -> z
-    /// Reverse Sequence z
+    /// 
+    /// note: currently using 2tuple pairing multiple times
+    /// could simplify by using 2tupe(2tuple(a,b), 3tuple(c,d,e))
     /// </summary>
 
     /*
@@ -21,7 +23,7 @@
      *      ([ushort],[ushort]) -> [uint]
      *      ([uint],uint) -> [ulong]
      * 
-     * -------------------------using SHORTS
+     * -------------------------using SHORTS-------------------------STOP(I dont want to use BigInteger)-------------------------
      * short	-32,768 to 32,767	Signed 16-bit integer
      * ushort	0 to 65,535	Unsigned 16-bit integer
      * COMBOS: (65,53_6)^2 = 4,294,967,296 [exactly what uint can store]
@@ -30,7 +32,7 @@
      *      (ushort,ushort) -> [uint]
      *      (ushort,ushort) -> [uint]
      *      ([uint],[uint]) -> [ulong]
-     *      ([ulong],ulong) -> [BigInteger]           STOP         
+     *      ([ulong],ulong) -> [BigInteger]                 
      * 
      * -------------------------using INTS
      * int	    -2,147,483,648 to 2,147,483,647	Signed 32-bit integer
@@ -41,7 +43,7 @@
      *      (uint,uint) -> [ulong]
      *      (uint,uint) -> [ulong]
      *      ([ulong],[ulong]) -> [BigInteger]           
-     *      ([BigInteger],BigInteger) -> [BigInteger]           DONT     
+     *      ([BigInteger],BigInteger) -> [BigInteger]               
      * 
      * -------------------------using LONGS
      * long	    -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807	Signed 64-bit integer
@@ -52,7 +54,7 @@
      *      (ulong,ulong) -> [BigInteger]
      *      (ulong,ulong) -> [BigInteger]
      *      ([BigInteger],[BigInteger]) -> [BigInteger]
-     *      ([BigInteger],BigInteger) -> [BigInteger]           DONT
+     *      ([BigInteger],BigInteger) -> [BigInteger]          
      */
 
     public static class _5tuple //1 type range [(byte/sbyte)]
@@ -60,7 +62,7 @@
         #region (X,Y) -> Z
 
         //(sbyte/byte) [2]
-        //[2]^5 = 32 possible combos
+        //[2]^5 = 32 possible combos [sets of 16]
 
         #region byte [16]
 

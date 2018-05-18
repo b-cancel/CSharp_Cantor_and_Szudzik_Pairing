@@ -4,7 +4,6 @@
     /// Description: public functions for 4 tuple pairing
     /// Programmer: Bryan Cancel
     /// Combine Sequence [(a,b),(c,d)] -> z
-    /// Reverse Sequence z -> [(AB),(CD)] => (AB) -> (a,b) & (CD) -> (c,d)
     /// </summary>
 
     /*
@@ -30,7 +29,7 @@
      *      (ushort,ushort) -> [uint]
      *      ([uint],[uint]) -> [ulong]
      * 
-     * -------------------------using INTS
+     * -------------------------using INTS-------------------------STOP(I dont want to use BigInteger)-------------------------
      * int	    -2,147,483,648 to 2,147,483,647	Signed 32-bit integer
      * uint	    0 to 4,294,967,295	Unsigned 32-bit integer
      * COMBOS: (4,294,967,29_6)^2 = 18,446,744,073,709,551,616 [exactly what ulong can store]
@@ -38,7 +37,7 @@
      * using SZUDZIK:
      *      (uint,uint) -> [ulong]
      *      (uint,uint) -> [ulong]
-     *      ([ulong],[ulong]) -> [BigInteger]           STOP
+     *      ([ulong],[ulong]) -> [BigInteger]        
      * 
      * -------------------------using LONGS
      * long	    -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807	Signed 64-bit integer
@@ -48,7 +47,7 @@
      * using SZUDZIK:
      *      (ulong,ulong) -> [BigInteger]
      *      (ulong,ulong) -> [BigInteger]
-     *      ([BigInteger],[BigInteger]) -> [BigInteger]         DONT
+     *      ([BigInteger],[BigInteger]) -> [BigInteger]       
      */
 
     public static class _4tuple //2 type ranges [(byte/sbyte)|(ushort/short)]
@@ -56,7 +55,7 @@
         #region (X,Y) -> Z
 
         //(sbyte/byte),(short/ushort) [4]
-        //[4]^4 = 256 possible combos
+        //[4]^4 = 256 possible combos [sets of 64]
 
         #region 1st var is sbyte
 
